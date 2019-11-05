@@ -79,9 +79,9 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="imageOfPlace" destination="0AW-WF-nsU" id="PNi-PW-h2o"/>
-                                    <outlet property="locationLabel" destination="ojN-nv-UNx" id="0QE-IJ-fSV"/>
+                                    <outlet property="locationLabel" destination="XRB-Hl-dso" id="uWw-I1-h5u"/>
                                     <outlet property="nameLabel" destination="MD4-I4-5mH" id="TXH-Ox-Pzs"/>
-                                    <outlet property="typeLabel" destination="0Dp-7B-fT2" id="Yko-1s-DI5"/>
+                                    <outlet property="typeLabel" destination="0Dp-7B-fT2" id="bCD-MV-FCy"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
