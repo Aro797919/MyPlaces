@@ -243,19 +243,27 @@
                     <navigationItem key="navigationItem" title="New Place" id="Lut-UR-IEl">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="5yn-2z-YNC">
                             <connections>
-                                <segue destination="Sey-cc-P2H" kind="unwind" unwindAction="cancelAction:" id="tyO-91-8we"/>
+                                <action selector="cancelAction:" destination="xT6-YK-n0X" id="njh-sy-SdV"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="rOT-8h-G3d"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="rOT-8h-G3d">
+                            <connections>
+                                <segue destination="Sey-cc-P2H" kind="unwind" unwindAction="unwindSegue:" id="bAe-8t-BqE"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="imageOfPlace" destination="Pr4-r7-d3z" id="a1Z-LW-8cw"/>
+                        <outlet property="placeImage" destination="Pr4-r7-d3z" id="a1Z-LW-8cw"/>
+                        <outlet property="placeLocation" destination="q1D-Ph-LDG" id="kI3-cf-AuH"/>
+                        <outlet property="placeName" destination="DRV-cK-ijJ" id="LA4-Qk-mPn"/>
+                        <outlet property="placeType" destination="dRT-Ab-rGI" id="PEn-oz-jx2"/>
+                        <outlet property="saveButton" destination="rOT-8h-G3d" id="gTp-34-8Ue"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ryd-XL-8x5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="Sey-cc-P2H" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1621.7391304347827" y="-107.14285714285714"/>
+            <point key="canvasLocation" x="1603" y="-121"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="CHP-RX-TT4">
