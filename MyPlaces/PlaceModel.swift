@@ -23,4 +23,3 @@ class Place: Object {
         self.imageData = imageData
     }
 }
-
