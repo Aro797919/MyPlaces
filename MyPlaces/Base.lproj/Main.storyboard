@@ -2,13 +2,14 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kJ3-wG-Z8N">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--My Places-->
         <scene sceneID="uxT-HH-T75">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="baX-hU-Zf9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tableViewController id="yZr-Vp-bDD" customClass="MainViewController" customModule="MyPlaces" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="85" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="PFx-E1-s78">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -85,6 +86,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="My Places" largeTitleDisplayMode="never" id="ZfM-7J-qoF">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="AZ" id="41o-Vd-YTs"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="pQn-yx-cPh">
                             <connections>
                                 <segue destination="85J-Tl-DIQ" kind="presentation" modalTransitionStyle="crossDissolve" id="Hqp-cd-UBb"/>
@@ -92,9 +94,8 @@
                         </barButtonItem>
                     </navigationItem>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="baX-hU-Zf9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-87" y="-84"/>
+            <point key="canvasLocation" x="268" y="-115"/>
         </scene>
         <!--New Place-->
         <scene sceneID="rHj-OQ-xfB">
@@ -116,7 +117,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Photo" translatesAutoresizingMaskIntoConstraints="NO" id="Pr4-r7-d3z">
-                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="250"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="250.00000000000006"/>
                                                 </imageView>
                                             </subviews>
                                             <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -264,7 +265,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ryd-XL-8x5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="Sey-cc-P2H" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1174" y="-48"/>
+            <point key="canvasLocation" x="1388" y="-115"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="CHP-RX-TT4">
@@ -301,10 +302,11 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FOO-kd-f0t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="555" y="17"/>
+            <point key="canvasLocation" x="1045" y="-778"/>
         </scene>
     </scenes>
     <resources>
+        <image name="AZ" width="25" height="24"/>
         <image name="Photo" width="195" height="196"/>
     </resources>
     <inferredMetricsTieBreakers>
