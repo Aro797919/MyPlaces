@@ -175,7 +175,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ryd-XL-8x5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="Sey-cc-P2H" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1688" y="-115"/>
+            <point key="canvasLocation" x="1042" y="-115"/>
         </scene>
         <!--My Places-->
         <scene sceneID="jff-ss-xjM">
@@ -265,6 +265,9 @@
                                     <segment title="Date"/>
                                     <segment title="Name"/>
                                 </segments>
+                                <connections>
+                                    <action selector="sortSelection:" destination="CfF-vW-KtF" eventType="valueChanged" id="zZ6-nv-Vxz"/>
+                                </connections>
                             </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -280,7 +283,11 @@
                         <viewLayoutGuide key="safeArea" id="pWN-lm-Mjq"/>
                     </view>
                     <navigationItem key="navigationItem" title="My Places" largeTitleDisplayMode="never" id="qbM-jS-zA9">
-                        <barButtonItem key="leftBarButtonItem" title="Item" image="AZ" id="CM2-T5-vHi"/>
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="AZ" id="CM2-T5-vHi">
+                            <connections>
+                                <action selector="reversedSorting:" destination="CfF-vW-KtF" id="MFQ-mK-L2N"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="qGY-hy-bGU">
                             <connections>
                                 <segue destination="85J-Tl-DIQ" kind="presentation" id="M4w-nn-Wfn"/>
@@ -288,12 +295,14 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="reversedSortingButton" destination="CM2-T5-vHi" id="IeC-Qi-goZ"/>
+                        <outlet property="segmentedControl" destination="4co-Ij-fUM" id="Vzn-CA-wbP"/>
                         <outlet property="tableView" destination="Bzv-Rf-LRQ" id="gT2-jI-Dyp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g8a-Pv-bdC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="550.72463768115949" y="-115.17857142857142"/>
+            <point key="canvasLocation" x="661" y="-115"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="CHP-RX-TT4">
@@ -330,7 +339,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FOO-kd-f0t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1045" y="-778"/>
+            <point key="canvasLocation" x="1043" y="-776"/>
         </scene>
     </scenes>
     <resources>
