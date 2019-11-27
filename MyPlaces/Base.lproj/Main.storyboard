@@ -27,7 +27,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Photo" translatesAutoresizingMaskIntoConstraints="NO" id="Pr4-r7-d3z">
-                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="250"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="250.00000000000006"/>
                                                 </imageView>
                                             </subviews>
                                             <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -141,6 +141,31 @@
                                                 <constraint firstAttribute="bottom" secondItem="eg6-wI-Osx" secondAttribute="bottom" constant="4" id="QWP-sa-5y6"/>
                                                 <constraint firstAttribute="trailing" secondItem="eg6-wI-Osx" secondAttribute="trailing" constant="16" id="tG7-Ea-Zqs"/>
                                                 <constraint firstItem="eg6-wI-Osx" firstAttribute="leading" secondItem="hmF-7X-Tto" secondAttribute="leading" constant="16" id="vuQ-Ot-wWR"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="140" id="75z-YP-SxL">
+                                        <rect key="frame" x="0.0" y="503" width="414" height="140"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="75z-YP-SxL" id="Ihb-8L-1C2">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="140"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="yD5-PV-9fX" customClass="RatingControl" customModule="MyPlaces" customModuleProvider="target">
+                                                    <rect key="frame" x="91" y="50" width="232" height="40"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="size" keyPath="starSize">
+                                                            <size key="value" width="40" height="40"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="starCount">
+                                                            <integer key="value" value="5"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="yD5-PV-9fX" firstAttribute="centerX" secondItem="Ihb-8L-1C2" secondAttribute="centerX" id="34a-YE-eIy"/>
+                                                <constraint firstItem="yD5-PV-9fX" firstAttribute="centerY" secondItem="Ihb-8L-1C2" secondAttribute="centerY" id="hQ6-lE-rQk"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
