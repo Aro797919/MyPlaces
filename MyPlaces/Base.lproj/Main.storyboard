@@ -27,7 +27,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Photo" translatesAutoresizingMaskIntoConstraints="NO" id="Pr4-r7-d3z">
-                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="250.00000000000006"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="250"/>
                                                 </imageView>
                                             </subviews>
                                             <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -151,7 +151,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="140"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="yD5-PV-9fX" customClass="RatingControl" customModule="MyPlaces" customModuleProvider="target">
+                                                <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="232" placeholderIntrinsicHeight="40" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="yD5-PV-9fX" customClass="RatingControl" customModule="MyPlaces" customModuleProvider="target">
                                                     <rect key="frame" x="91" y="50" width="232" height="40"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="size" keyPath="starSize">
@@ -210,6 +210,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="4co-Ij-fUM">
+                                <rect key="frame" x="0.0" y="88" width="414" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="414" id="r2U-dC-qML"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Date"/>
+                                    <segment title="Name"/>
+                                </segments>
+                                <connections>
+                                    <action selector="sortSelection:" destination="CfF-vW-KtF" eventType="valueChanged" id="zZ6-nv-Vxz"/>
+                                </connections>
+                            </segmentedControl>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="85" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Bzv-Rf-LRQ">
                                 <rect key="frame" x="0.0" y="118" width="414" height="778"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -284,26 +297,13 @@
                                     <outlet property="delegate" destination="CfF-vW-KtF" id="l1q-OO-QaP"/>
                                 </connections>
                             </tableView>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="4co-Ij-fUM">
-                                <rect key="frame" x="0.0" y="88" width="414" height="31"/>
-                                <segments>
-                                    <segment title="Date"/>
-                                    <segment title="Name"/>
-                                </segments>
-                                <connections>
-                                    <action selector="sortSelection:" destination="CfF-vW-KtF" eventType="valueChanged" id="zZ6-nv-Vxz"/>
-                                </connections>
-                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="4co-Ij-fUM" firstAttribute="trailing" secondItem="pWN-lm-Mjq" secondAttribute="trailing" id="7R8-Em-a9P"/>
-                            <constraint firstItem="4co-Ij-fUM" firstAttribute="leading" secondItem="pWN-lm-Mjq" secondAttribute="leading" id="7SO-Bn-qF2"/>
-                            <constraint firstItem="4co-Ij-fUM" firstAttribute="leading" secondItem="pWN-lm-Mjq" secondAttribute="leading" id="D48-rX-vV6"/>
-                            <constraint firstItem="pWN-lm-Mjq" firstAttribute="bottom" secondItem="4co-Ij-fUM" secondAttribute="bottom" constant="744" id="hgX-TS-JpN"/>
+                            <constraint firstItem="4co-Ij-fUM" firstAttribute="centerX" secondItem="Bzv-Rf-LRQ" secondAttribute="centerX" id="DoL-mB-kOF"/>
+                            <constraint firstItem="Bzv-Rf-LRQ" firstAttribute="top" secondItem="4co-Ij-fUM" secondAttribute="bottom" id="YNw-1K-El1"/>
+                            <constraint firstItem="4co-Ij-fUM" firstAttribute="top" secondItem="pWN-lm-Mjq" secondAttribute="top" id="ZxF-Bk-D4O"/>
                             <constraint firstItem="4co-Ij-fUM" firstAttribute="top" secondItem="pWN-lm-Mjq" secondAttribute="top" id="lMb-1y-53g"/>
-                            <constraint firstItem="4co-Ij-fUM" firstAttribute="trailing" secondItem="pWN-lm-Mjq" secondAttribute="trailing" id="qbf-4G-WVa"/>
-                            <constraint firstItem="Bzv-Rf-LRQ" firstAttribute="top" secondItem="4co-Ij-fUM" secondAttribute="bottom" id="tVk-6f-gta"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="pWN-lm-Mjq"/>
                     </view>
@@ -327,7 +327,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g8a-Pv-bdC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="335" y="-115"/>
+            <point key="canvasLocation" x="334.78260869565219" y="-115.17857142857142"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="CHP-RX-TT4">
